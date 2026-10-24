@@ -14,7 +14,6 @@ This repository contains the static website published through GitHub Pages. The 
 - artifacts/changeguide.html: Artifact 1 case study with the required course sections
 - artifacts/changeguide-case-study.md: downloadable audience-facing case study
 - artifacts/assets/: screenshot evidence
-- Siddharth-Jadhav-Resume.pdf: public resume
 - Course-Artifact-Template.md: structure for future course artifacts
 
 ## Updating the portfolio
