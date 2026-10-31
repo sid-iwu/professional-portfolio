@@ -13,6 +13,8 @@ This repository contains the static website published through GitHub Pages. The 
 - style.css: shared website styling
 - artifacts/changeguide.html: Artifact 1 case study with the required course sections
 - artifacts/changeguide-case-study.md: downloadable audience-facing case study
+- artifacts/ml-vs-deep-learning.html: Artifact 2 comparison with all required portfolio sections
+- artifacts/ml-vs-deep-learning-guide.docx: downloadable audience-facing comparison guide
 - artifacts/assets/: screenshot evidence
 - Course-Artifact-Template.md: structure for future course artifacts
 
