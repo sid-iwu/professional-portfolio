@@ -1,0 +1,98 @@
+.lesson-viewer {
+  margin: 0 auto 58px;
+  max-width: 940px;
+}
+
+.lesson-viewer h2 {
+  font-size: clamp(28px, 4vw, 33px);
+}
+
+.lesson-viewer > p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.lesson-controls:not([hidden]) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px 0 12px;
+}
+
+.lesson-controls .button {
+  background: #e6eddc;
+  border: 1px solid #a6b5a0;
+  color: #193c39;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0;
+  padding: 10px 14px;
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.lesson-controls .button[aria-disabled="true"] {
+  color: #52665f;
+  cursor: default;
+  opacity: .75;
+  transform: none;
+}
+
+.lesson-controls .button:focus-visible,
+.lesson-answer summary:focus-visible {
+  outline: 2px solid #193c39;
+  outline-offset: 3px;
+}
+
+.lesson-position {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.lesson-slide {
+  margin: 0 0 16px;
+}
+
+.lesson-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.lesson-slide figcaption {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+
+.lesson-slide figcaption .text-link {
+  display: inline-block;
+  margin: 4px 0 4px 12px;
+}
+
+.lesson-answer {
+  margin-top: 12px;
+  max-width: 66ch;
+}
+
+.lesson-answer summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lesson-answer p {
+  line-height: 1.6;
+}
+
+@media print {
+  .lesson-controls,
+  .lesson-slide figcaption a {
+    display: none !important;
+  }
+}

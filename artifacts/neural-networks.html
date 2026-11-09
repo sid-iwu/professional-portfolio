@@ -7,6 +7,8 @@
   <title>Neural Networks Simply Explained | Siddharth Jadhav</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="case-study.css">
+  <link rel="stylesheet" href="lesson-viewer.css">
+  <script src="lesson-viewer.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -24,7 +26,7 @@
         <h1>Neural Networks<br><em>Simply Explained</em></h1>
         <p class="case-intro">A short lesson for readers new to AI, using cat recognition to explain how a neural network learns and makes predictions.</p>
         <div class="actions">
-          <a class="button lime" href="neural-networks-lesson.pptx" download>Download the PowerPoint lesson <span aria-hidden="true">↓</span></a>
+          <a class="button lime" href="#deliverable">View the presentation <span aria-hidden="true">↓</span></a>
           <a class="text-link" href="#introduction">Read the portfolio write-up <span aria-hidden="true">↘</span></a>
         </div>
         <dl class="case-meta">
@@ -32,6 +34,91 @@
           <div><dt>Skill demonstrated</dt><dd>Explaining complex ideas in plain language</dd></div>
           <div><dt>Coursework</dt><dd>Assignment 3.4 · Communication for Learning</dd></div>
         </dl>
+      </section>
+
+      <section id="deliverable" class="lesson-viewer" aria-labelledby="lesson-viewer-title">
+        <h2 id="lesson-viewer-title">Tangible Deliverable</h2>
+        <p>View the ten-slide lesson here or download the PowerPoint for the full presenter notes.</p>
+        <div class="lesson-controls" hidden>
+          <button type="button" class="button" data-slide-step="-1" aria-label="Previous slide">← Previous</button>
+          <p class="lesson-position" aria-live="polite" aria-atomic="true"></p>
+          <button type="button" class="button" data-slide-step="1" aria-label="Next slide">Next →</button>
+        </div>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-01.webp" width="1600" height="900" decoding="async" alt="How a network learns to recognize cats. A short lesson for readers new to AI. AIML-500 Communication for Learning. Portfolio adaptation by Siddharth Jadhav.">
+            <figcaption>
+              <span>Neural nets, simply explained</span>
+              <a class="text-link" href="assets/neural-networks/slide-01.webp" target="_blank" rel="noopener" aria-label="Open slide 1 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A child might call anything furry a cat. More examples and corrections help the child spot the difference. An illustration shows the child looking at a cat and a picture of a dog.">
+            <figcaption>
+              <span>Teaching someone to recognize a cat</span>
+              <a class="text-link" href="assets/neural-networks/slide-02.webp" target="_blank" rel="noopener" aria-label="Open slide 2 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-03.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A diagram shows picture information flowing through layers of small calculations to a prediction of cat. Weights work like dials that change how strongly signals affect the next layer.">
+            <figcaption>
+              <span>Inside a neural net</span>
+              <a class="text-link" href="assets/neural-networks/slide-03.webp" target="_blank" rel="noopener" aria-label="Open slide 3 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-04.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A network sees a cat picture and predicts dog. The label says cat. Training adjusts the weights to reduce error. The process repeats across many varied examples.">
+            <figcaption>
+              <span>Learning through feedback</span>
+              <a class="text-link" href="assets/neural-networks/slide-04.webp" target="_blank" rel="noopener" aria-label="Open slide 4 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-05.webp" width="1600" height="900" loading="lazy" decoding="async" alt="If every training cat sits on a sofa, the model may learn the shortcut that a sofa means cat. It may struggle when it sees a cat outdoors. Varied examples matter.">
+            <figcaption>
+              <span>The wrong clue</span>
+              <a class="text-link" href="assets/neural-networks/slide-05.webp" target="_blank" rel="noopener" aria-label="Open slide 5 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-06.webp" width="1600" height="900" loading="lazy" decoding="async" alt="During training, examples include answers and feedback adjusts the weights. After training, the model uses the learned weights to make a guess on a new picture. Making a guess does not automatically update the model.">
+            <figcaption>
+              <span>Training and using the network</span>
+              <a class="text-link" href="assets/neural-networks/slide-06.webp" target="_blank" rel="noopener" aria-label="Open slide 6 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-07.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Set aside pictures the model never sees during training. Include cats indoors and outdoors, and dogs on sofas and away from them. Check which examples the model gets wrong.">
+            <figcaption>
+              <span>A fair test uses new pictures</span>
+              <a class="text-link" href="assets/neural-networks/slide-07.webp" target="_blank" rel="noopener" aria-label="Open slide 7 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-08.webp" width="1600" height="900" loading="lazy" decoding="async" alt="The model calls a dog on a sofa a cat. What clue might the model be using? Which new pictures would test your guess? Take a moment to explain your reasoning.">
+            <figcaption>
+              <span>A quick teach-back</span>
+              <a class="text-link" href="assets/neural-networks/slide-08.webp" target="_blank" rel="noopener" aria-label="Open slide 8 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+              <details class="lesson-answer">
+                <summary>Show the sample answer</summary>
+                <p>The model might be using the sofa as a clue for “cat.” Try new pictures of cats and dogs both on and off sofas, then compare the mistakes across those groups.</p>
+              </details>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-09.webp" width="1600" height="900" loading="lazy" decoding="async" alt="During training, a network uses labeled examples to adjust its weights. For a new picture, it uses those weights to make a prediction. A good test includes unfamiliar examples.">
+            <figcaption>
+              <span>The explanation to remember</span>
+              <a class="text-link" href="assets/neural-networks/slide-09.webp" target="_blank" rel="noopener" aria-label="Open slide 9 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+          <figure class="lesson-slide" data-slide>
+            <img src="assets/neural-networks/slide-10.webp" width="1600" height="900" loading="lazy" decoding="async" alt="AIML-500 Assignment 3.4, Communication for Learning. Portfolio adaptation by Siddharth Jadhav. Original contributors are Gu, Yuchen. Jadhav, Siddharth Sahebrao. Kanakam, Balachander. Mariy Krishan, Mohammed. Mohammed Khursheed Ali, Mazhar. Punyamurthula, Krishna Saketh. Singh, Akash. Suhit Nadal, Estanislao. Sultan, Mohammed. Sun, Yeque. Uppuluri, Jayasri.">
+            <figcaption>
+              <span>Coursework credits</span>
+              <a class="text-link" href="assets/neural-networks/slide-10.webp" target="_blank" rel="noopener" aria-label="Open slide 10 full size in a new tab">Open full size <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
+        <a class="text-link" href="neural-networks-lesson.pptx" download>Download the PowerPoint <span aria-hidden="true">↓</span></a>
       </section>
 
       <div class="case-content">
@@ -80,12 +167,6 @@
             <li>Google. <a href="https://developers.google.com/machine-learning/glossary/fundamentals">Machine Learning Glossary</a>. Entries on supervised learning, training, and inference.</li>
             <li>Geirhos et al. (2020). <a href="https://arxiv.org/abs/2004.07780">Shortcut learning in deep neural networks</a>.</li>
           </ul>
-        </section>
-
-        <section id="deliverable" class="source-section">
-          <h2>Tangible Deliverable</h2>
-          <p>The ten-slide PowerPoint includes the complete lesson, facilitator notes, a teach-back activity, and the original group credits.</p>
-          <a class="button lime" href="neural-networks-lesson.pptx" download>Download the PowerPoint lesson <span aria-hidden="true">↓</span></a>
         </section>
       </div>
 
