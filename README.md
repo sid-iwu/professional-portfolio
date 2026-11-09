@@ -15,8 +15,8 @@ This repository contains the static website published through GitHub Pages. The 
 - artifacts/changeguide-case-study.md: downloadable audience-facing case study
 - artifacts/ml-vs-deep-learning.html: Artifact 2 comparison with all required portfolio sections
 - artifacts/ml-vs-deep-learning-guide.docx: downloadable audience-facing comparison guide
-- artifacts/verifying-ai-answers.html: Artifact 3 portfolio write-up
-- artifacts/verifying-ai-answers-guide.docx: standalone guide for verifying AI-generated claims
+- artifacts/neural-networks.html: Artifact 3 portfolio write-up
+- artifacts/neural-networks-lesson.pptx: standalone introductory neural networks lesson
 - artifacts/assets/: screenshot evidence
 - Course-Artifact-Template.md: structure for future course artifacts
 
