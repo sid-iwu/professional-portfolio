@@ -17,8 +17,8 @@ This repository contains the static website published through GitHub Pages. The 
 - artifacts/ml-vs-deep-learning-guide.docx: downloadable audience-facing comparison guide
 - artifacts/neural-networks.html: Artifact 3 portfolio write-up
 - artifacts/neural-networks-lesson.pptx: standalone introductory neural networks lesson
-- artifacts/responsible-ml-validation.html: Artifact 4 portfolio write-up
-- artifacts/responsible-ml-checklist.html: standalone validation checklist with a Word download
+- artifacts/responsible-ml-validation.html: Artifact 4 validation checklist and portfolio write-up
+- artifacts/responsible-ml-checklist.docx: editable validation worksheet
 - artifacts/assets/: screenshot evidence
 - Course-Artifact-Template.md: structure for future course artifacts
 

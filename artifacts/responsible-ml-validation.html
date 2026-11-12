@@ -7,6 +7,7 @@
   <title>Responsible ML Validation Checklist | Siddharth Jadhav</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="case-study.css">
+  <link rel="stylesheet" href="responsible-ml-checklist.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -24,7 +25,7 @@
         <h1>Responsible ML<br><em>Validation Checklist</em></h1>
         <p class="case-intro">A worksheet for deciding whether a dataset, a model pilot, or a federated learning design is ready to advance.</p>
         <div class="actions">
-          <a class="button lime" href="responsible-ml-checklist.html">Open the checklist <span aria-hidden="true">↗</span></a>
+          <a class="button lime" href="#deliverable">Go to the checklist <span aria-hidden="true">↓</span></a>
           <a class="text-link" href="#introduction">Read the portfolio write-up <span aria-hidden="true">↓</span></a>
         </div>
         <dl class="case-meta">
@@ -34,12 +35,98 @@
         </dl>
       </section>
       <div class="case-content">
-        <section id="deliverable" aria-labelledby="deliverable-heading">
+        <section id="deliverable" class="checklist-content" aria-labelledby="deliverable-heading">
           <h2 id="deliverable-heading">Tangible Deliverable</h2>
-          <p>The standalone checklist contains nine checks and a decision log. Read it in the browser or use the editable Word version to record review evidence.</p>
-          <a class="text-link" href="responsible-ml-checklist.html">View the checklist <span aria-hidden="true">↗</span></a>
-          <span aria-hidden="true"> · </span>
-          <a class="text-link" href="responsible-ml-checklist.docx" download>Download the Word checklist <span aria-hidden="true">↓</span></a>
+          <p>Before testing, agree on the thresholds, minimum sample sizes and review owners. Mark each check Pass, Hold or Not Applicable. Hold the decision when a required check fails or the evidence is incomplete.</p>
+          <section>
+            <h3>Data quality and cleaning</h3>
+            <p>Before accepting a cleaned training dataset</p>
+            <ol class="checklist-items">
+            <li>
+              <h4>Quality and labels</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>Save a version of the raw data. Record missing values, invalid values and duplicates. Audit a sample of labels and record the disagreement rate.</dd></div>
+                <div><dt>When to advance</dt><dd>Critical issues are resolved and label disagreement meets the agreed limit.</dd></div>
+              </dl>
+            </li>
+            <li>
+              <h4>Representation</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>Compare before-and-after counts and removal rates by group or source, where relevant.</dd></div>
+                <div><dt>When to advance</dt><dd>If a group exceeds the agreed removal limit, hold the decision until the reviewer resolves or accepts the difference and records why.</dd></div>
+              </dl>
+            </li>
+            <li>
+              <h4>Data leakage</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>Count exact duplicates across training and test sets. Check for overlap at the required unit, such as customer ID.</dd></div>
+                <div><dt>When to advance</dt><dd>Confirm zero cross-split duplicates and zero overlap where entities must be independent. Fit learned preprocessing on training data only.</dd></div>
+              </dl>
+            </li>
+            </ol>
+          </section>
+          <section>
+            <h3>Bias and distribution shift</h3>
+            <p>Before expanding a hiring-model pilot</p>
+            <ol class="checklist-items">
+            <li>
+              <h4>Local evidence</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>Test on representative local cases. Record coverage by role or site and compare model performance with the current process using the same cases and independently reviewed, job-relevant labels.</dd></div>
+                <div><dt>When to advance</dt><dd>Local coverage and performance meet agreed criteria. Historical hiring decisions alone are insufficient labels.</dd></div>
+              </dl>
+            </li>
+            <li>
+              <h4>Missed candidates</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>For each approved evaluation group, record qualified candidates missed ÷ all independently assessed qualified candidates. Include counts and uncertainty.</dd></div>
+                <div><dt>When to advance</dt><dd>Each rate and the largest gap meet the agreed limits. Hold where sample sizes are too small to judge.</dd></div>
+              </dl>
+            </li>
+            <li>
+              <h4>Pilot controls</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>Record who reviews decisions, what is monitored and which results trigger a pause.</dd></div>
+                <div><dt>When to advance</dt><dd>Use a shadow pilot where predictions do not drive hiring decisions. Expand only after the review owner signs off.</dd></div>
+              </dl>
+            </li>
+            </ol>
+          </section>
+          <section>
+            <h3>Privacy and governance</h3>
+            <p>Before advancing a federated learning design</p>
+            <ol class="checklist-items">
+            <li>
+              <h4>Data compatibility</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>Compare schema, units, label definitions and coverage across participants. Record mismatches and how they will be resolved.</dd></div>
+                <div><dt>When to advance</dt><dd>Required fields and target definitions align across the participating sites.</dd></div>
+              </dl>
+            </li>
+            <li>
+              <h4>Update and model exposure</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>Document who can access individual updates and the trained model. Test the proposed secure aggregation and access controls, confirm audit logging and assess compromised-participant and inference risks.</dd></div>
+                <div><dt>When to advance</dt><dd>The privacy and security reviewers accept the residual risk for the documented threat model.</dd></div>
+              </dl>
+            </li>
+            <li>
+              <h4>Privacy and utility</h4>
+              <dl>
+                <div><dt>Evidence to record</dt><dd>If using differential privacy, record what unit is protected, the privacy budget and the assumptions used to calculate it. Compare utility with a baseline on the same test set.</dd></div>
+                <div><dt>When to advance</dt><dd>The privacy budget and any loss in utility meet limits agreed before testing.</dd></div>
+              </dl>
+            </li>
+            </ol>
+          </section>
+          <section>
+            <h3>Decision log</h3>
+            <p>For each check, record the observed result, threshold, evidence link and owner. If a check is on hold, record the next action and review date. Explain any Not Applicable entry.</p>
+            <p><strong>Record format</strong><br>Check · Result and limit · Evidence link · Decision and owner · Next action and date</p>
+            <h4>Worked example</h4>
+            <p>Suppose a cleaning audit shows that 30 of 200 records from one source were removed (15%), above the team’s example limit of 10%. Mark the representation check Hold. Link the before-and-after counts, assign the data owner to review the exclusion rule, and set a date to rerun the check. The figures are illustrative.</p>
+            <a class="text-link" href="responsible-ml-checklist.docx" download>Download the editable Word checklist <span aria-hidden="true">↓</span></a>
+          </section>
         </section>
         <section id="introduction">
           <h2>Introduction</h2>
@@ -47,7 +134,7 @@
         </section>
         <section id="description">
           <h2>Description</h2>
-          <p>The worksheet covers a cleaned dataset, a hiring-model pilot and a federated learning design. Each scenario pairs the evidence to collect with conditions for advancing. The decision log records results, who owns the decision and what to do if a check is on hold. These are proposed checks based on simulations.</p>
+          <p>The worksheet covers a cleaned dataset, a hiring-model pilot and a federated learning design. Each scenario pairs the evidence to collect with conditions for advancing. The decision log and worked example show how to document results, name an owner and follow up when a check is on hold. These are proposed checks based on simulations.</p>
         </section>
         <section id="objective">
           <h2>Objective</h2>
@@ -74,11 +161,7 @@
         </section>
         <section id="references">
           <h2>References</h2>
-          <ul>
-            <li><cite>Data Challenge Scenarios</cite>, Siddharth Jadhav. AIML-500 Workshop 4, Indiana Wesleyan University, 2026.</li>
-            <li>Google Machine Learning Crash Course. <a href="https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets">Dividing the original dataset</a> and <a href="https://developers.google.com/machine-learning/crash-course/fairness/equality-of-opportunity">equality of opportunity</a>.</li>
-            <li>NIST. <a href="https://www.nist.gov/blogs/cybersecurity-insights/privacy-attacks-federated-learning">Privacy attacks in federated learning</a>. The checklist also links to NIST’s guidance on protecting updates and trained models.</li>
-          </ul>
+          <ul><li>Siddharth Jadhav, Data Challenge Scenarios, AIML-500 Workshop 4, Indiana Wesleyan University (2026).</li><li><a href="https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets">Google Machine Learning Crash Course · Dividing the original dataset</a></li><li><a href="https://developers.google.com/machine-learning/crash-course/fairness/equality-of-opportunity">Google Machine Learning Crash Course · Equality of opportunity</a></li><li><a href="https://www.nist.gov/blogs/cybersecurity-insights/privacy-attacks-federated-learning">NIST · Privacy attacks in federated learning</a></li><li><a href="https://www.nist.gov/blogs/cybersecurity-insights/protecting-model-updates-privacy-preserving-federated-learning">NIST · Protecting model updates</a></li><li><a href="https://www.nist.gov/blogs/cybersecurity-insights/protecting-trained-models-privacy-preserving-federated-learning">NIST · Protecting trained models</a></li></ul>
         </section>
       </div>
       <footer><span>© 2026 Siddharth Jadhav</span><a href="../index.html#coursework">← Back to coursework</a></footer>
