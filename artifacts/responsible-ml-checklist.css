@@ -1,0 +1,33 @@
+.checklist-items {
+  margin: 20px 0 0;
+  padding-inline-start: 26px;
+}
+
+.checklist-items > li {
+  border-top: 1px solid var(--line);
+  padding: 12px 0 5px 6px;
+}
+
+.checklist-items > li::marker {
+  color: #415654;
+  font-weight: 600;
+}
+
+.checklist-items h3 {
+  margin-top: 0;
+}
+
+.checklist-items p {
+  margin: 0 0 10px;
+}
+
+.checklist-content a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media print {
+  .checklist-items > li {
+    break-inside: avoid;
+  }
+}

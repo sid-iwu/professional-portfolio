@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A portfolio case study on adapting three Workshop 4 data scenarios into a validation checklist for engineering teams.">
+  <title>Responsible ML Validation Checklist | Siddharth Jadhav</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="../index.html" aria-label="Siddharth Jadhav home">sj<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="../index.html#coursework">All coursework</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="wrap case-wrap">
+      <section class="case-hero">
+        <p class="eyebrow">ARTIFACT 04 / WORKSHOP 4 / AIML-500</p>
+        <h1>Responsible ML<br><em>Validation Checklist</em></h1>
+        <p class="case-intro">A worksheet for deciding whether a dataset, a model pilot, or a federated learning design is ready to advance.</p>
+        <div class="actions">
+          <a class="button lime" href="responsible-ml-checklist.html">Open the checklist <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#introduction">Read the portfolio write-up <span aria-hidden="true">↓</span></a>
+        </div>
+        <dl class="case-meta">
+          <div><dt>Audience</dt><dd>ML practitioners and engineering leads</dd></div>
+          <div><dt>Skill demonstrated</dt><dd>Designing validation criteria for responsible ML</dd></div>
+          <div><dt>Coursework</dt><dd>Data Challenge Scenarios · Workshop 4</dd></div>
+        </dl>
+      </section>
+      <div class="case-content">
+        <section id="deliverable" aria-labelledby="deliverable-heading">
+          <h2 id="deliverable-heading">Tangible Deliverable</h2>
+          <p>The standalone checklist contains nine checks and a decision log. Read it in the browser or use the editable Word version to record review evidence.</p>
+          <a class="text-link" href="responsible-ml-checklist.html">View the checklist <span aria-hidden="true">↗</span></a>
+          <span aria-hidden="true"> · </span>
+          <a class="text-link" href="responsible-ml-checklist.docx" download>Download the Word checklist <span aria-hidden="true">↓</span></a>
+        </section>
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>In the Workshop 4 Data Challenge Scenarios, I considered how data cleaning, distribution shift and privacy risks can affect an ML project. The workshop summary recommended turning those decisions into a checklist with measurable criteria. I adapted my reasoning into a worksheet an engineering team can use during a review.</p>
+        </section>
+        <section id="description">
+          <h2>Description</h2>
+          <p>The worksheet covers a cleaned dataset, a hiring-model pilot and a federated learning design. Each scenario pairs the evidence to collect with conditions for advancing. The decision log records results, who owns the decision and what to do if a check is on hold. These are proposed checks based on simulations.</p>
+        </section>
+        <section id="objective">
+          <h2>Objective</h2>
+          <p>Turn the risks identified in the coursework into checks that a reviewer can measure and document before approving the next step.</p>
+        </section>
+        <section id="process">
+          <h2>Process</h2>
+          <ol class="process-list">
+            <li>Preserved the three workshop scenarios and identified the decision each one asks a team to make.</li>
+            <li>Translated the original reasoning into evidence requests. For example, the cleaning review compares removal rates, and the hiring review tracks qualified candidates the model misses.</li>
+            <li>Used the workshop’s follow-up questions to distinguish update exposure from inference risks and added a way to record the remaining risks alongside model utility.</li>
+          </ol>
+        </section>
+        <section id="tools">
+          <h2>Tools and Technologies Used</h2>
+          <p>I drew on the simulated workshop and its written summary. I used Word-compatible authoring and AI-assisted editing to format and refine the checklist. Google and NIST references support the evaluation and privacy concepts. Federated learning, secure aggregation and differential privacy are techniques evaluated in the scenario.</p>
+        </section>
+        <section id="value-proposition">
+          <h2>Value Proposition</h2>
+          <h3>Unique Value</h3>
+          <p>The checklist makes each risk actionable. It specifies which measurement a reviewer should request, when the evidence is too weak to proceed and where to record the decision.</p>
+          <h3>Relevance</h3>
+          <p>Engineering leads can use it to structure an ML review and assign follow-up work. It demonstrates how I turn technical risks into decisions that teams can document, a skill I can use when helping organizations adopt reliable AI.</p>
+        </section>
+        <section id="references">
+          <h2>References</h2>
+          <ul>
+            <li><cite>Data Challenge Scenarios</cite>, Siddharth Jadhav. AIML-500 Workshop 4, Indiana Wesleyan University, 2026.</li>
+            <li>Google Machine Learning Crash Course. <a href="https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets">Dividing the original dataset</a> and <a href="https://developers.google.com/machine-learning/crash-course/fairness/equality-of-opportunity">equality of opportunity</a>.</li>
+            <li>NIST. <a href="https://www.nist.gov/blogs/cybersecurity-insights/privacy-attacks-federated-learning">Privacy attacks in federated learning</a>. The checklist also links to NIST’s guidance on protecting updates and trained models.</li>
+          </ul>
+        </section>
+      </div>
+      <footer><span>© 2026 Siddharth Jadhav</span><a href="../index.html#coursework">← Back to coursework</a></footer>
+    </div>
+  </main>
+</body>
+</html>
